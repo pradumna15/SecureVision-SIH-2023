@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylescriminal.css') }}">
+</head>
+
+<body>
+    <!-- Marquee Section -->
+    <div class="marquee-container">
+        <div class="marquee">
+            Criminal Detection System- Constant Crime Watch
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <img src="{{ url_for('static', filename='facelogo.png') }}" alt="Facial Recognition Logo" class="logo">
+        <h1>Criminal Detection System</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <h2>Discover Our Innovative Criminal Detection System</h2>
+            <p>
+                Welcome to our advanced criminal detection solution. We utilize cutting-edge computer vision techniques
+                to criminal by constant monitoring and facial recogniyion.
+            </p>
+            <p>
+                Our real-time insights empower you to make informed decisions and proactively respond to identify
+                criminals and prevent crime.
+            </p>
+        </div>
+
+        <!-- Start Button -->
+        <div class="button-container">
+            <a class="start-button" href="/run_facial_req">Start Criminal Detection</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2023 Criminal Detection
+    </footer>
+
+    <script>
+        // Function to scroll back to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show the "Back to Top" button when scrolling down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector(".back-to-top").style.display = "block";
+            } else {
+                document.querySelector(".back-to-top").style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

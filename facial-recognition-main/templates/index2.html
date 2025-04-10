@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesobject.css') }}">
+</head>
+
+<body>
+    <!-- Marquee Section -->
+    <div class="marquee-container">
+        <div class="marquee">
+            Object Detection System - Eyes on Everything
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <img src="{{ url_for('static', filename='objectlogo.png') }}" alt="Object Detection Logo" class="logo">
+        <h1>Object Detection System</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <h2>Discover Our Innovative Object Detective System</h2>
+            <p>
+                Welcome to our advanced object detection solution. We utilize cutting-edge computer vision techniques
+                to monitor various object and ensure safety.
+            </p>
+            <p>
+                Our real-time insights empower you to make informed decisions and proactively respond to identify
+                potential
+                weapons and other objects.
+            </p>
+        </div>
+
+        <!-- Start Button -->
+        <div class="button-container">
+            <a class="start-button" href="/run_object_detection">Start Object Detection</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2023 Object Detection System
+    </footer>
+
+    <script>
+        // Function to scroll back to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show the "Back to Top" button when scrolling down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector(".back-to-top").style.display = "block";
+            } else {
+                document.querySelector(".back-to-top").style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

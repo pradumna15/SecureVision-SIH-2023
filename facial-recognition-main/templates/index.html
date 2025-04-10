@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylescrowd.css') }}">
+</head>
+
+<body>
+    <!-- Marquee Section -->
+    <div class="marquee-container">
+        <div class="marquee">
+            Crowd Management System - Keeping Crowds Safe
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <img src="{{ url_for('static', filename='crowdlogo.png') }}" alt="Crowd Management Logo" class="logo">
+        <h1>Crowd Management System</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <h2>Discover Our Innovative Crowd Management System</h2>
+            <p>
+                Welcome to our advanced crowd management solution. We utilize cutting-edge computer vision techniques
+                to monitor crowd density and ensure safety in crowded areas.
+            </p>
+            <p>
+                Our real-time insights empower you to make informed decisions and proactively respond to potential crowd
+                management situations.
+            </p>
+        </div>
+
+        <!-- Start Button -->
+        <div class="button-container">
+            <a class="start-button" href="/run_crowd_management">Start Crowd Management</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2023 Crowd Management System
+    </footer>
+
+    <script>
+        // Function to scroll back to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show the "Back to Top" button when scrolling down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector(".back-to-top").style.display = "block";
+            } else {
+                document.querySelector(".back-to-top").style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
